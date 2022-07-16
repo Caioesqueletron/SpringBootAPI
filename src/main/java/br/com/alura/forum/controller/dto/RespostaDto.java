@@ -1,35 +1,37 @@
 package br.com.alura.forum.controller.dto;
 
-import br.com.alura.forum.modelo.Resposta;
-
 import java.time.LocalDateTime;
 
+import br.com.alura.forum.modelo.Resposta;
+
 public class RespostaDto {
-    private Long id;
-    private String mensagem;
-    private LocalDateTime dataCriacao;
-    private String nomeAutor;
 
-    public RespostaDto(Resposta resposta) {
-        this.id = resposta.getId();
-        this.mensagem = resposta.getMensagem();
-        this.dataCriacao = resposta.getDataCriacao();
-        this.nomeAutor = resposta.getAutor().getNome();
-    }
+	private Long id;
+	private String mensagem;
+	private LocalDateTime dataCriacao;
+	private String nomeAutor;
+	
+	public RespostaDto(Resposta resposta) {
+		this.id = resposta.getId();
+		this.mensagem = resposta.getMensagem();
+		this.dataCriacao = resposta.getDataCriacao();
+		this.nomeAutor = resposta.getAutor().getNome();
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
-    }
+	public String getMensagem() {
+		return mensagem;
+	}
 
-    public void setDataCriacao(LocalDateTime dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
+	public LocalDateTime getDataCriacao() {
+		return dataCriacao;
+	}
 
-    public void setNomeAutor(String nomeAutor) {
-        this.nomeAutor = nomeAutor;
-    }
+	public String getNomeAutor() {
+		return nomeAutor;
+	}
+	
 }
